@@ -1,0 +1,17 @@
+include templates/components/_components.pug
+
+doctype html
+html(lang="de-DE")
+  head
+    title=htmlWebpackPlugin.options.title
+
+    meta(name='description', content='Layer9 - Software-Entwicklung & IT-Beratung')
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+
+  body(style="opacity: 0.01; display: flex; flex-direction: column;")
+    include templates/_body
+
+  footer
+    include templates/_footer

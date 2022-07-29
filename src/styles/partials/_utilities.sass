@@ -1,0 +1,10 @@
+$height-utilities: map-merge(map-get($utilities, "height"),(values: map-merge(map-get(map-get($utilities, "height"), "values"),(48: 48px))))
+$utilities: map-merge($utilities, ("height": $height-utilities))
+
+$max-width-utilities: (property: max-width, class: maxw, values: (320: 320px, 640: 640px, 1200: 1200px))
+$utilities: map-merge($utilities, ("max-width": $max-width-utilities))
+
+$min-width-utilities: (property: min-width, class: minw, values: (240: 240px, 300: 300px))
+$utilities: map-merge($utilities, ("min-width": $min-width-utilities))
+
+$enable-important-utilities: false

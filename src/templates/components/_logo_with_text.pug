@@ -1,0 +1,6 @@
+mixin logo-with-text(text)
+  .d-flex.flex-column.align-items-center.p-3.m-1
+    if block
+      .logo.w-48.h-48.mb-2
+        block
+    h3.fs-5.fw-normal= text

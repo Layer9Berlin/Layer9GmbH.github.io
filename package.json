@@ -1,0 +1,51 @@
+{
+  "name": "layer9-website",
+  "description": "A simple website for Layer9 GmbH",
+  "version": "1.0.0",
+  "author": "Layer9 GmbH",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
+    "start:local": "cross-env NODE_ENV=development webpack-dev-server --open --hot --host 0.0.0.0",
+    "build": "cross-env NODE_ENV=production webpack --progress",
+    "build:gh-pages": "cross-env NODE_ENV=production PUBLIC_PATH=layer9-website webpack --progress",
+    "analyzer": "cross-env NODE_ENV=production ANALYZER=true webpack -p --progress --hide-modules"
+  },
+  "dependencies": {
+    "@babel/runtime-corejs3": "^7.18.9",
+    "bootstrap": "^5.2.0",
+    "core-js": "^3.24.0",
+    "sass": "^1.54.0"
+  },
+  "engines": {
+    "node": ">=8.9.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.18.9",
+    "@babel/core": "^7.18.9",
+    "@babel/plugin-transform-runtime": "^7.18.9",
+    "@babel/preset-env": "^7.18.9",
+    "babel-loader": "^8.2.5",
+    "babel-preset-minify": "^0.5.2",
+    "cross-env": "^7.0.3",
+    "css-hot-loader": "^1.4.4",
+    "css-loader": "^6.7.1",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.1",
+    "pug": "^3.0.2",
+    "pug3-loader": "^2.4.3",
+    "sass-loader": "^13.0.2",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.74.0",
+    "webpack-bundle-analyzer": "^4.5.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.9.3"
+  }
+}

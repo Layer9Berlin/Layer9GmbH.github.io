@@ -1,0 +1,33 @@
+$transform-offset: 5px
+
+#layer9_logo
+  opacity: 0.01
+  will-change: opacity
+  animation: fade-in .8s ease-in-out forwards
+
+.logo-line
+  will-change: transform
+  animation: draw-logo 4s ease-in-out forwards
+
+  &--top-right
+    transform: translate($transform-offset, -1 * $transform-offset)
+
+  &--bottom-left
+    transform: translate(-1 * $transform-offset, $transform-offset)
+
+@keyframes draw-logo
+  to
+    transform: none
+
+@keyframes fade-in
+  to
+    opacity: 1
+
+.logo svg
+  width: 48px
+  height: 48px
+
+.logo--small svg
+  display: flex
+  width: 24px
+  height: 24px
