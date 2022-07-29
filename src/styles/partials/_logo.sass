@@ -6,8 +6,9 @@ $transform-offset: 5px
   animation: fade-in .8s ease-in-out forwards
 
 .logo-line
-  will-change: transform
-  animation: draw-logo 4s ease-in-out forwards
+  &--top-right,
+  &--bottom-left
+    transition: transform 2.5s
 
   &--top-right
     transform: translate($transform-offset, -1 * $transform-offset)
@@ -15,9 +16,11 @@ $transform-offset: 5px
   &--bottom-left
     transform: translate(-1 * $transform-offset, $transform-offset)
 
-@keyframes draw-logo
-  to
-    transform: none
+body.scrolled
+  .logo-line
+    &--top-right,
+    &--bottom-left
+      transform: none
 
 @keyframes fade-in
   to

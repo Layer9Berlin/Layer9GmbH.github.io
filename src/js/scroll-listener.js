@@ -8,6 +8,7 @@ const updateCustomProperties = (element, scrollPosition) => {
 }
 
 const updateCustomPropertiesCallback = throttle(() => {
+  document.querySelector('body').classList.toggle('scrolled', window.scrollY > 0)
   updateCustomProperties(document.querySelector('#development_section'), window.scrollY)
   updateCustomProperties(document.querySelector('#consulting_section'), window.scrollY)
 }, 100)
